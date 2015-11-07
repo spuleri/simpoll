@@ -13,6 +13,8 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var pollTableView: UITableView!
     
     var addPollView: AddPollView!
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,10 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         
         pollTableView.delegate = self
         pollTableView.dataSource = self
+        
+        let swipeDown: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "dismissAddPollView")
+        swipeDown.direction = UISwipeGestureRecognizerDirection.Down
+        self.addPollView.addGestureRecognizer(swipeDown)
     }
 
     override func didReceiveMemoryWarning() {
