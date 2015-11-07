@@ -20,6 +20,9 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
     
     var controller: AddPollController!
     
+    // MARK: Initialization
+    // ------------------------------------------------------------------------------ Initialization
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
     }
@@ -33,6 +36,9 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
         
         configureUI()
     }
+    
+    // MARK: Target Action
+    // ------------------------------------------------------------------------------- Target Action
     
     @IBAction func cancelButtonTouched(sender: AnyObject) {
         clearFields()
@@ -48,6 +54,9 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
         optionTwoField.text = ""
         pollTextView.text = "Enter your poll here!"
     }
+    
+    // MARK: UI Config
+    // ----------------------------------------------------------------------------------- UI Config
     
     func configureUI() {
         configureButton(cancelButton)
@@ -73,10 +82,16 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
         view.layer.cornerRadius = 4.0;
     }
     
+    // MARK: Text Field Delegate
+    // ------------------------------------------------------------------------- Text Field Delegate
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
     }
+    
+    // MARK: Text View Delegate
+    // -------------------------------------------------------------------------- Text View Delegate
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         if(text == "\n") {

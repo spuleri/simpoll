@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fhr-8j-fgR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchIcon" highlightedImage="LaunchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fhr-8j-fgR">
                                 <rect key="frame" x="225" y="225" width="150" height="150"/>
                                 <animations/>
                                 <constraints>
@@ -27,7 +27,7 @@
                             </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.40784313725490196" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.95294117647058818" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fhr-8j-fgR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="522-WY-7eL"/>
                             <constraint firstItem="fhr-8j-fgR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="WuU-uk-Pfq"/>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchScreenIcon" width="512" height="512"/>
+        <image name="LaunchIcon" width="512" height="512"/>
     </resources>
 </document>

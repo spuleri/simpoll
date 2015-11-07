@@ -16,9 +16,23 @@ class PollTableViewCell: UITableViewCell {
     @IBOutlet weak var optionOneVoteLabel: UILabel!
     @IBOutlet weak var optionTwoVoteLabel: UILabel!
     
+    //var poll: Poll!
+    
+    func configureWithPoll(/*poll:Poll*/) {
+        /*
+        questionLabel.text = poll.question
+        optionOneButton.titleLabel.text = poll.option1
+        optionTwoButton.titleLabel.text = poll.option2
+        optionOneVoteLabel.text = poll.option1Count + " votes"
+        optionTwoVoteLabel.text = poll.option2Count + " votes"
+        */
+    }
+    
     @IBAction func optionOneButtonTouched(sender: AnyObject) {
+        // TODO: Increment vote count and update poll
     }
     
     @IBAction func optionTwoButtonTouched(sender: AnyObject) {
+        // TODO: Increment vote count and update poll
     }
 }

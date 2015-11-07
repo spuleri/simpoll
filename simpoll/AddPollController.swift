@@ -11,9 +11,15 @@ import Foundation
 class AddPollController: NSObject {
     var parent: PollListViewController!
     
+    // MARK: Initialization
+    // ------------------------------------------------------------------------------ Initialization
+    
     init(parent: PollListViewController) {
         self.parent = parent
     }
+    
+    // MARK: Target Action
+    // ------------------------------------------------------------------------------- Target Action
     
     func cancelButtonTouched() {
         parent.dismissAddPollView()
