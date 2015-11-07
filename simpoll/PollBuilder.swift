@@ -22,6 +22,7 @@ class PollBuilder {
         
         return listOfPolls
     }
+    
     func buildPollFromJSON(pollJSON: JSON) -> Poll {
         return Poll(question: pollJSON["question"].stringValue, option1: pollJSON["option1"].stringValue, option2: pollJSON["option2"].stringValue, option1Votes: pollJSON["option1Votes"].intValue, option2Votes: pollJSON["option2Votes"].intValue, created: NSDate(), privatePoll: pollJSON["option1Votes"].boolValue)
         
