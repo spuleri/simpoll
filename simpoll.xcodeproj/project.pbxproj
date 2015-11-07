@@ -22,9 +22,6 @@
 		E1479DE91BED6B7C00CF4F18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1479DE71BED6B7C00CF4F18 /* LaunchScreen.storyboard */; };
 		E1479DF41BED6B7C00CF4F18 /* simpollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1479DF31BED6B7C00CF4F18 /* simpollTests.swift */; };
 		E1479DFF1BED6B7C00CF4F18 /* simpollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1479DFE1BED6B7C00CF4F18 /* simpollUITests.swift */; };
-		E1A47DE01BEE3C0F004890B5 /* NetworkGuy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A47DDD1BEE3C0F004890B5 /* NetworkGuy.swift */; };
-		E1A47DE11BEE3C0F004890B5 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A47DDE1BEE3C0F004890B5 /* Poll.swift */; };
-		E1A47DE21BEE3C0F004890B5 /* PollBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A47DDF1BEE3C0F004890B5 /* PollBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,9 +65,6 @@
 		E1479DFA1BED6B7C00CF4F18 /* simpollUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpollUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1479DFE1BED6B7C00CF4F18 /* simpollUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpollUITests.swift; sourceTree = "<group>"; };
 		E1479E001BED6B7C00CF4F18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1A47DDD1BEE3C0F004890B5 /* NetworkGuy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkGuy.swift; sourceTree = "<group>"; };
-		E1A47DDE1BEE3C0F004890B5 /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
-		E1A47DDF1BEE3C0F004890B5 /* PollBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +73,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6481F18F6EFA0B80A3E112A9 /* Pods.framework in Frameworks */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +241,7 @@
 				TargetAttributes = {
 					E1479DDA1BED6B7C00CF4F18 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = M2JNHSR23U;
+						DevelopmentTeam = 53T6WGJL5K;
 					};
 					E1479DEE1BED6B7C00CF4F18 = {
 						CreatedOnToolsVersion = 7.1;
@@ -312,7 +305,6 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		4E80BE2B43B1C0278913CD9B /* Copy Pods Resources */ = {
-
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -514,6 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = simpoll/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spuleri.simpoll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -527,6 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = simpoll/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spuleri.simpoll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
