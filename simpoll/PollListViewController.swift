@@ -13,11 +13,11 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var pollTableView: UITableView!
     
     var addPollView: AddPollView!
-    var topView: UIView!
+    var polls: [Poll] = []
+	var topView: UIView!
     
-    // MARK: Target Action
-    // ------------------------------------------------------------------------------- Target Action
-
+    // MARK: Lifecycle
+    // ----------------------------------------------------------------------------------- Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,8 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         pollTableView.delegate = self
         pollTableView.dataSource = self
         
-        // Construct swipe recognizer to dismiss new poll modal
+        getPolls()
+        
         let swipeDown: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "dismissAddPollView")
         swipeDown.direction = UISwipeGestureRecognizerDirection.Down
         self.addPollView.addGestureRecognizer(swipeDown)
@@ -39,6 +40,16 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func getPolls() {
+        NetworkGuy.sharedInstance.getAllPolls { (polls:[Poll]) -> Void in
+            self.polls = polls
+            self.pollTableView.reloadData()
+        }
+    }
+    
+    // MARK: UI Config
+    // ----------------------------------------------------------------------------------- UI Config
 
     func configureAddPollButton() {
         addPollButton.layer.masksToBounds = false;
@@ -70,19 +81,15 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         self.view.addSubview(addPollView)
     }
     
+    // MARK: AddPollView
+    // --------------------------------------------------------------------------------- AddPollView
+    
     func showAddPollView() {
-        
         UIView.animateWithDuration(0.4, delay: 0.0, options: .CurveEaseOut, animations: {
             var viewFrame = self.addPollView.frame
-            
             viewFrame.origin.y -= viewFrame.size.height
             self.addPollView.frame = viewFrame
-            self.topView.alpha = 0.6
             }, completion: { finished in })
-        
-        
-        
-
     }
     
     func dismissAddPollView() {
@@ -94,16 +101,24 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
             }, completion: { finished in })
     }
     
+    // MARK: Target Action
+    // ------------------------------------------------------------------------------- Target Action
+    
     @IBAction func addPollButtonTouched(sender: AnyObject) {
         showAddPollView()
     }
     
+    // MARK: Table View Delegate and Datasource
+    // ---------------------------------------------------------- Table View Delegate and Datasource
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return polls.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: PollTableViewCell = pollTableView.dequeueReusableCellWithIdentifier("PollCell") as! PollTableViewCell
+        
+        cell.configureWithPoll(polls[indexPath.row])
         
         return cell
     }
