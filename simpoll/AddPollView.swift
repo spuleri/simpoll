@@ -46,7 +46,7 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
     }
     
     @IBAction func submitButtonTouched(sender: AnyObject) {
-        controller.submitButtonTouched()
+        controller.submitButtonTouched(pollTextView.text, option1: optionOneField.text!, option2: optionTwoField.text!)
     }
     
     func clearFields() {

@@ -24,7 +24,7 @@ class NetworkGuy {
     
     let pollBuilder = PollBuilder()
     
-    func getAllPolls(completionClosure: ([Poll]) -> Void){
+    func getAllPolls(completionClosure: ([Poll]) -> Void) {
         
         Alamofire.request(.GET, endpoint)
             .responseJSON { response in
@@ -40,20 +40,15 @@ class NetworkGuy {
                     let polls = self.pollBuilder.buildListOfPolls(self.testJSON)
                     
                      completionClosure(polls)
-                    
                 }
         }
-        
-        func createPoll(question: String , option1: String, option2: String) -> Poll {
-            let newPoll =  self.pollBuilder.buildPollFromStrings(question, option1: option1, option2: option2)
-            
-            // TODO: make post request to create poll
-            
-            return newPoll
-            
-        }
-        
+    }
     
+    func createPoll(question: String , option1: String, option2: String) {
+        let newPoll =  self.pollBuilder.buildPollFromStrings(question, option1: option1, option2: option2)
         
+        print("Made a new poll: " + newPoll.question)
+        
+        // TODO: make post request to create poll
     }
 }

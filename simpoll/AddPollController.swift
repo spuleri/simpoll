@@ -25,8 +25,8 @@ class AddPollController: NSObject {
         parent.dismissAddPollView()
     }
     
-    func submitButtonTouched() {
-        // TODO: Build a Poll object with the views contents and pass it along
+    func submitButtonTouched(question:String, option1:String, option2:String) {
+        NetworkGuy.sharedInstance.createPoll(question, option1: option1, option2: option2)
         parent.dismissAddPollView()
     }
 }

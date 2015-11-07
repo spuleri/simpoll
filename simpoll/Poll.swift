@@ -29,10 +29,11 @@ class Poll {
         self.privatePoll = privatePoll
     }
     
-    private func incrementOption1() {
+    func incrementOption1() {
         self.option1Votes++
     }
-    private func incrementOption2() {
+    
+    func incrementOption2() {
         self.option2Votes++
     }
     
