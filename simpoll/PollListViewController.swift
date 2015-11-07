@@ -16,8 +16,7 @@ class PollListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAddPollButton()
-        
-        addPollView = AddPollView(frame: CGRectMake(0,0,0,0), controller: AddPollController(parent: self))
+        configureAddPollView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,12 +31,35 @@ class PollListViewController: UIViewController {
         addPollButton.layer.cornerRadius = addPollButton.frame.size.width/2;
     }
     
+    func configureAddPollView() {
+        addPollView = NSBundle.mainBundle().loadNibNamed("AddPollView", owner: self, options: nil)[0] as? AddPollView
+        addPollView.configure(CGRectMake(0, self.view.frame.size.height,
+            self.view.frame.size.width,
+            self.view.frame.size.height/2),
+            controller: AddPollController(parent: self))
+        self.view.addSubview(addPollView)
+    }
+    
     func showAddPollView() {
-        // TODO: Animate view onscreen
+        UIView.animateWithDuration(0.4, delay: 0.0, options: .CurveEaseOut, animations: {
+            var viewFrame = self.addPollView.frame
+            viewFrame.origin.y -= viewFrame.size.height
+            
+            self.addPollView.frame = viewFrame
+            }, completion: { finished in })
     }
     
     func dismissAddPollView() {
-        // TODO: Animate view offscreen
+        UIView.animateWithDuration(0.4, delay: 0.0, options: .CurveEaseOut, animations: {
+            var viewFrame = self.addPollView.frame
+            viewFrame.origin.y += viewFrame.size.height
+            
+            self.addPollView.frame = viewFrame
+            }, completion: { finished in })
+    }
+    
+    @IBAction func addPollButtonTouched(sender: AnyObject) {
+        showAddPollView()
     }
     
     @IBAction func unwindToPollList(segue:UIStoryboardSegue) {
