@@ -14,9 +14,17 @@ class NetworkGuy {
     
     static let sharedInstance = NetworkGuy()
     
-    var endpoint = "https://reddit.com/.json"
+    let testJSON = JSON(["poll1":["question":"is it time for bed?", "option1": "yes", "option2": "no", "option1Votes": 5, "option2Votes": 1, "created": NSDate(), "privatePoll": true],
+        "poll2":["question":"is it not time for bed?", "option1": "yes", "option2": "no", "option1Votes": 11, "option2Votes": 1, "created": NSDate(), "privatePoll": false],
+        "poll3":["question":"is it time for bed?", "option1": "yes", "option2": "no", "option1Votes":156, "option2Votes": 1, "created": NSDate(), "privatePoll": true],
+        "poll4":["question":"is it not time for bed?", "option1": "yes", "option2": "no", "option1Votes": 51, "option2Votes": 1, "created": NSDate(), "privatePoll": false]])
     
-    func getAllPolls(){
+    // TODO: Remove - test endpoint to actually make an async request
+    let endpoint = "https://reddit.com/.json"
+    
+    let pollBuilder = PollBuilder()
+    
+    func getAllPolls(completionClosure: ([Poll]) -> Void){
         
         Alamofire.request(.GET, endpoint)
             .responseJSON { response in
@@ -28,17 +36,24 @@ class NetworkGuy {
                 }
                 
                 if let value: AnyObject = response.result.value {
-                    // handle the results as JSON, without a bunch of nested if loops
-                    let posts = JSON(value)
-                                        
-                    if let title = posts["data"]["children"][0]["data"]["title"].string {
-                        // to access a field:
-                        print("The title is: " + title)
-                    } else {
-                        print("error parsing /posts/1")
-                    }
+                    // send dummy JSON for now instead of real response
+                    let polls = self.pollBuilder.buildListOfPolls(self.testJSON)
+                    
+                     completionClosure(polls)
+                    
                 }
         }
+        
+        func createPoll(question: String , option1: String, option2: String) -> Poll {
+            let newPoll =  self.pollBuilder.buildPollFromStrings(question, option1: option1, option2: option2)
+            
+            // TODO: make post request to create poll
+            
+            return newPoll
+            
+        }
+        
+    
         
     }
 }
