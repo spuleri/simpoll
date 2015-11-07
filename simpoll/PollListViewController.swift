@@ -89,6 +89,7 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
             var viewFrame = self.addPollView.frame
             viewFrame.origin.y -= viewFrame.size.height
             self.addPollView.frame = viewFrame
+            self.topView.alpha = 0.6
             }, completion: { finished in })
     }
     
