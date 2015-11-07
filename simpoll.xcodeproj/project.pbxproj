@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E134D291BEDA10B0007CDCC /* AddPollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E134D281BEDA10B0007CDCC /* AddPollView.xib */; };
+		6E134D2B1BEDA40E0007CDCC /* AddPollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E134D2A1BEDA40E0007CDCC /* AddPollView.swift */; };
+		6E134D2D1BEDA4BF0007CDCC /* AddPollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E134D2C1BEDA4BF0007CDCC /* AddPollController.swift */; };
 		E1479DDF1BED6B7C00CF4F18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1479DDE1BED6B7C00CF4F18 /* AppDelegate.swift */; };
-		E1479DE11BED6B7C00CF4F18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1479DE01BED6B7C00CF4F18 /* ViewController.swift */; };
+		E1479DE11BED6B7C00CF4F18 /* PollListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1479DE01BED6B7C00CF4F18 /* PollListViewController.swift */; };
 		E1479DE41BED6B7C00CF4F18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1479DE21BED6B7C00CF4F18 /* Main.storyboard */; };
 		E1479DE61BED6B7C00CF4F18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1479DE51BED6B7C00CF4F18 /* Assets.xcassets */; };
 		E1479DE91BED6B7C00CF4F18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1479DE71BED6B7C00CF4F18 /* LaunchScreen.storyboard */; };
@@ -34,9 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E134D281BEDA10B0007CDCC /* AddPollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPollView.xib; sourceTree = "<group>"; };
+		6E134D2A1BEDA40E0007CDCC /* AddPollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPollView.swift; sourceTree = "<group>"; };
+		6E134D2C1BEDA4BF0007CDCC /* AddPollController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPollController.swift; sourceTree = "<group>"; };
 		E1479DDB1BED6B7C00CF4F18 /* simpoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1479DDE1BED6B7C00CF4F18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1479DE01BED6B7C00CF4F18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1479DE01BED6B7C00CF4F18 /* PollListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollListViewController.swift; sourceTree = "<group>"; };
 		E1479DE31BED6B7C00CF4F18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1479DE51BED6B7C00CF4F18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1479DE81BED6B7C00CF4F18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,11 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				E1479DDE1BED6B7C00CF4F18 /* AppDelegate.swift */,
-				E1479DE01BED6B7C00CF4F18 /* ViewController.swift */,
+				E1479DE01BED6B7C00CF4F18 /* PollListViewController.swift */,
 				E1479DE21BED6B7C00CF4F18 /* Main.storyboard */,
+				6E134D281BEDA10B0007CDCC /* AddPollView.xib */,
 				E1479DE51BED6B7C00CF4F18 /* Assets.xcassets */,
 				E1479DE71BED6B7C00CF4F18 /* LaunchScreen.storyboard */,
 				E1479DEA1BED6B7C00CF4F18 /* Info.plist */,
+				6E134D2A1BEDA40E0007CDCC /* AddPollView.swift */,
+				6E134D2C1BEDA4BF0007CDCC /* AddPollController.swift */,
 			);
 			path = simpoll;
 			sourceTree = "<group>";
@@ -193,7 +202,7 @@
 				TargetAttributes = {
 					E1479DDA1BED6B7C00CF4F18 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 53T6WGJL5K;
+						DevelopmentTeam = M2JNHSR23U;
 					};
 					E1479DEE1BED6B7C00CF4F18 = {
 						CreatedOnToolsVersion = 7.1;
@@ -235,6 +244,7 @@
 				E1479DE91BED6B7C00CF4F18 /* LaunchScreen.storyboard in Resources */,
 				E1479DE61BED6B7C00CF4F18 /* Assets.xcassets in Resources */,
 				E1479DE41BED6B7C00CF4F18 /* Main.storyboard in Resources */,
+				6E134D291BEDA10B0007CDCC /* AddPollView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1479DE11BED6B7C00CF4F18 /* ViewController.swift in Sources */,
+				E1479DE11BED6B7C00CF4F18 /* PollListViewController.swift in Sources */,
 				E1479DDF1BED6B7C00CF4F18 /* AppDelegate.swift in Sources */,
+				6E134D2D1BEDA4BF0007CDCC /* AddPollController.swift in Sources */,
+				6E134D2B1BEDA40E0007CDCC /* AddPollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = simpoll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spuleri.simpoll;
@@ -411,6 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = simpoll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spuleri.simpoll;
@@ -485,6 +499,7 @@
 				E1479E051BED6B7C00CF4F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1479E061BED6B7C00CF4F18 /* Build configuration list for PBXNativeTarget "simpollTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +508,7 @@
 				E1479E081BED6B7C00CF4F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1479E091BED6B7C00CF4F18 /* Build configuration list for PBXNativeTarget "simpollUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +517,7 @@
 				E1479E0B1BED6B7C00CF4F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

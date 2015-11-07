@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddPollView" customModule="simpoll" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4Z-TA-hi7">
+                    <rect key="frame" x="8" y="260" width="288" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelButtonTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="o7e-AC-3xz"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qiY-ZU-HES">
+                    <rect key="frame" x="8" y="8" width="584" height="128"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Ei-25-fbp">
+                            <rect key="frame" x="0.0" y="0.0" width="584" height="128"/>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="uKB-3R-gje"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbH-3v-Sma">
+                    <rect key="frame" x="8" y="144" width="584" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qhq-L1-7Mp">
+                            <rect key="frame" x="0.0" y="0.0" width="584" height="50"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0fk-PJ-LPD"/>
+                        <constraint firstAttribute="bottom" secondItem="Qhq-L1-7Mp" secondAttribute="bottom" id="8At-XW-8Il"/>
+                        <constraint firstItem="Qhq-L1-7Mp" firstAttribute="leading" secondItem="dbH-3v-Sma" secondAttribute="leading" id="ftJ-UO-8oF"/>
+                        <constraint firstItem="Qhq-L1-7Mp" firstAttribute="top" secondItem="dbH-3v-Sma" secondAttribute="top" id="h7D-hW-oQt"/>
+                        <constraint firstAttribute="trailing" secondItem="Qhq-L1-7Mp" secondAttribute="trailing" id="lxU-AP-w0F"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0h-8M-BN8">
+                    <rect key="frame" x="8" y="202" width="584" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCG-wB-TKu">
+                            <rect key="frame" x="0.0" y="0.0" width="584" height="50"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5m8-jT-uFH"/>
+                        <constraint firstItem="fCG-wB-TKu" firstAttribute="leading" secondItem="F0h-8M-BN8" secondAttribute="leading" id="FnB-zg-MPZ"/>
+                        <constraint firstAttribute="bottom" secondItem="fCG-wB-TKu" secondAttribute="bottom" id="JBD-Hw-gd7"/>
+                        <constraint firstItem="fCG-wB-TKu" firstAttribute="top" secondItem="F0h-8M-BN8" secondAttribute="top" id="T89-uc-31a"/>
+                        <constraint firstAttribute="trailing" secondItem="fCG-wB-TKu" secondAttribute="trailing" id="f4O-uz-1xK"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRy-tF-lhh">
+                    <rect key="frame" x="304" y="260" width="288" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Submit"/>
+                    <connections>
+                        <action selector="submitButtonTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="coe-Ng-LEM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dbH-3v-Sma" firstAttribute="top" secondItem="qiY-ZU-HES" secondAttribute="bottom" constant="8" id="7WJ-Nb-RW7"/>
+                <constraint firstItem="dbH-3v-Sma" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="9Qf-pt-AQD"/>
+                <constraint firstAttribute="trailing" secondItem="dbH-3v-Sma" secondAttribute="trailing" constant="8" id="EXb-ss-hAH"/>
+                <constraint firstItem="n4Z-TA-hi7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="GXV-LC-JSG"/>
+                <constraint firstItem="n4Z-TA-hi7" firstAttribute="top" secondItem="F0h-8M-BN8" secondAttribute="bottom" constant="8" id="Gbo-ct-07Y"/>
+                <constraint firstItem="hRy-tF-lhh" firstAttribute="leading" secondItem="n4Z-TA-hi7" secondAttribute="trailing" constant="8" id="MP6-Oy-2Qs"/>
+                <constraint firstItem="F0h-8M-BN8" firstAttribute="top" secondItem="dbH-3v-Sma" secondAttribute="bottom" constant="8" id="OFx-Cv-19d"/>
+                <constraint firstAttribute="trailing" secondItem="qiY-ZU-HES" secondAttribute="trailing" constant="8" id="XLL-JF-q5m"/>
+                <constraint firstItem="qiY-ZU-HES" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Zte-bK-7oF"/>
+                <constraint firstItem="qiY-ZU-HES" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="d8v-hX-bO3"/>
+                <constraint firstItem="hRy-tF-lhh" firstAttribute="top" secondItem="F0h-8M-BN8" secondAttribute="bottom" constant="8" id="deQ-kO-OdR"/>
+                <constraint firstItem="F0h-8M-BN8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="drJ-OE-QlH"/>
+                <constraint firstAttribute="trailing" secondItem="hRy-tF-lhh" secondAttribute="trailing" constant="8" id="eXw-Ne-66z"/>
+                <constraint firstItem="n4Z-TA-hi7" firstAttribute="width" secondItem="hRy-tF-lhh" secondAttribute="width" id="gRV-sn-LR1"/>
+                <constraint firstAttribute="trailing" secondItem="F0h-8M-BN8" secondAttribute="trailing" constant="8" id="owd-s2-Mo2"/>
+            </constraints>
+            <connections>
+                <outlet property="cancelButton" destination="n4Z-TA-hi7" id="Baa-vz-fkd"/>
+                <outlet property="optionOneField" destination="Qhq-L1-7Mp" id="Pmb-Wf-Qzy"/>
+                <outlet property="optionTwoField" destination="fCG-wB-TKu" id="1S6-QJ-M0p"/>
+                <outlet property="pollTextView" destination="0Ei-25-fbp" id="yjO-i4-DaX"/>
+                <outlet property="submitButton" destination="hRy-tF-lhh" id="Ah7-fl-1kq"/>
+            </connections>
+        </view>
+    </objects>
+</document>
