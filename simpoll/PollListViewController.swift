@@ -8,8 +8,9 @@
 
 import UIKit
 
-class PollListViewController: UIViewController {
+class PollListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var addPollButton: UIButton!
+    @IBOutlet weak var pollTableView: UITableView!
     
     var addPollView: AddPollView!
 
@@ -17,6 +18,9 @@ class PollListViewController: UIViewController {
         super.viewDidLoad()
         configureAddPollButton()
         configureAddPollView()
+        
+        pollTableView.delegate = self
+        pollTableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,7 +66,14 @@ class PollListViewController: UIViewController {
         showAddPollView()
     }
     
-    @IBAction func unwindToPollList(segue:UIStoryboardSegue) {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: PollTableViewCell = pollTableView.dequeueReusableCellWithIdentifier("PollCell") as! PollTableViewCell
+        
+        return cell
     }
 }
 
