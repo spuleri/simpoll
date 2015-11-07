@@ -13,6 +13,9 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var pollTableView: UITableView!
     
     var addPollView: AddPollView!
+    
+    // MARK: Target Action
+    // ------------------------------------------------------------------------------- Target Action
 
     override func viewDidLoad() {
         super.viewDidLoad()

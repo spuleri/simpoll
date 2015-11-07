@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6481F18F6EFA0B80A3E112A9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9A6ED9FDCE6C10BBC11B27 /* Pods.framework */; };
 		6E134D291BEDA10B0007CDCC /* AddPollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E134D281BEDA10B0007CDCC /* AddPollView.xib */; };
 		6E134D2B1BEDA40E0007CDCC /* AddPollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E134D2A1BEDA40E0007CDCC /* AddPollView.swift */; };
 		6E134D2D1BEDA4BF0007CDCC /* AddPollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E134D2C1BEDA4BF0007CDCC /* AddPollController.swift */; };
 		6E134D2F1BEDE0EA0007CDCC /* PollTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E134D2E1BEDE0EA0007CDCC /* PollTableViewCell.swift */; };
+		6E59A6851BEE3B4000C1187A /* NetworkGuy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E59A6821BEE3B4000C1187A /* NetworkGuy.swift */; };
+		6E59A6861BEE3B4000C1187A /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E59A6831BEE3B4000C1187A /* Poll.swift */; };
+		6E59A6871BEE3B4000C1187A /* PollBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E59A6841BEE3B4000C1187A /* PollBuilder.swift */; };
+		6ED8A4F11BEE649C0021F364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1479DE51BED6B7C00CF4F18 /* Assets.xcassets */; };
 		E1479DDF1BED6B7C00CF4F18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1479DDE1BED6B7C00CF4F18 /* AppDelegate.swift */; };
 		E1479DE11BED6B7C00CF4F18 /* PollListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1479DE01BED6B7C00CF4F18 /* PollListViewController.swift */; };
 		E1479DE41BED6B7C00CF4F18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1479DE21BED6B7C00CF4F18 /* Main.storyboard */; };
-		E1479DE61BED6B7C00CF4F18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1479DE51BED6B7C00CF4F18 /* Assets.xcassets */; };
 		E1479DE91BED6B7C00CF4F18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1479DE71BED6B7C00CF4F18 /* LaunchScreen.storyboard */; };
 		E1479DF41BED6B7C00CF4F18 /* simpollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1479DF31BED6B7C00CF4F18 /* simpollTests.swift */; };
 		E1479DFF1BED6B7C00CF4F18 /* simpollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1479DFE1BED6B7C00CF4F18 /* simpollUITests.swift */; };
@@ -42,6 +46,12 @@
 		6E134D2A1BEDA40E0007CDCC /* AddPollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPollView.swift; sourceTree = "<group>"; };
 		6E134D2C1BEDA4BF0007CDCC /* AddPollController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPollController.swift; sourceTree = "<group>"; };
 		6E134D2E1BEDE0EA0007CDCC /* PollTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollTableViewCell.swift; sourceTree = "<group>"; };
+		6E59A6821BEE3B4000C1187A /* NetworkGuy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkGuy.swift; sourceTree = "<group>"; };
+		6E59A6831BEE3B4000C1187A /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
+		6E59A6841BEE3B4000C1187A /* PollBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollBuilder.swift; sourceTree = "<group>"; };
+		72BDD17296B7B185732D731E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7D9A6ED9FDCE6C10BBC11B27 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		980CB007644E2BC89BE6F096 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E1479DDB1BED6B7C00CF4F18 /* simpoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1479DDE1BED6B7C00CF4F18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1479DE01BED6B7C00CF4F18 /* PollListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollListViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6481F18F6EFA0B80A3E112A9 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DEF26B4FC4C291314EB36E9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72BDD17296B7B185732D731E /* Pods.debug.xcconfig */,
+				980CB007644E2BC89BE6F096 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E1479DD21BED6B7C00CF4F18 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +109,8 @@
 				E1479DF21BED6B7C00CF4F18 /* simpollTests */,
 				E1479DFD1BED6B7C00CF4F18 /* simpollUITests */,
 				E1479DDC1BED6B7C00CF4F18 /* Products */,
+				DEF26B4FC4C291314EB36E9E /* Pods */,
+				FBB0F1C7AADD12F7F2C73638 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +127,9 @@
 		E1479DDD1BED6B7C00CF4F18 /* simpoll */ = {
 			isa = PBXGroup;
 			children = (
+				6E59A6821BEE3B4000C1187A /* NetworkGuy.swift */,
+				6E59A6831BEE3B4000C1187A /* Poll.swift */,
+				6E59A6841BEE3B4000C1187A /* PollBuilder.swift */,
 				E1479DDE1BED6B7C00CF4F18 /* AppDelegate.swift */,
 				E1479DE01BED6B7C00CF4F18 /* PollListViewController.swift */,
 				E1479DE21BED6B7C00CF4F18 /* Main.storyboard */,
@@ -137,6 +162,14 @@
 			path = simpollUITests;
 			sourceTree = "<group>";
 		};
+		FBB0F1C7AADD12F7F2C73638 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D9A6ED9FDCE6C10BBC11B27 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1479E031BED6B7C00CF4F18 /* Build configuration list for PBXNativeTarget "simpoll" */;
 			buildPhases = (
+				B8C94C833DC1153DD355E05D /* Check Pods Manifest.lock */,
 				E1479DD71BED6B7C00CF4F18 /* Sources */,
 				E1479DD81BED6B7C00CF4F18 /* Frameworks */,
 				E1479DD91BED6B7C00CF4F18 /* Resources */,
+				CDC8F9228435962EF513EC43 /* Embed Pods Frameworks */,
+				4E80BE2B43B1C0278913CD9B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,8 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1479DE91BED6B7C00CF4F18 /* LaunchScreen.storyboard in Resources */,
-				E1479DE61BED6B7C00CF4F18 /* Assets.xcassets in Resources */,
 				E1479DE41BED6B7C00CF4F18 /* Main.storyboard in Resources */,
+				6ED8A4F11BEE649C0021F364 /* Assets.xcassets in Resources */,
 				6E134D291BEDA10B0007CDCC /* AddPollView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,13 +303,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4E80BE2B43B1C0278913CD9B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8C94C833DC1153DD355E05D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CDC8F9228435962EF513EC43 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E1479DD71BED6B7C00CF4F18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E59A6851BEE3B4000C1187A /* NetworkGuy.swift in Sources */,
 				E1479DE11BED6B7C00CF4F18 /* PollListViewController.swift in Sources */,
+				6E59A6871BEE3B4000C1187A /* PollBuilder.swift in Sources */,
 				E1479DDF1BED6B7C00CF4F18 /* AppDelegate.swift in Sources */,
+				6E59A6861BEE3B4000C1187A /* Poll.swift in Sources */,
 				6E134D2D1BEDA4BF0007CDCC /* AddPollController.swift in Sources */,
 				6E134D2F1BEDE0EA0007CDCC /* PollTableViewCell.swift in Sources */,
 				6E134D2B1BEDA40E0007CDCC /* AddPollView.swift in Sources */,
@@ -414,6 +501,7 @@
 		};
 		E1479E041BED6B7C00CF4F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72BDD17296B7B185732D731E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -426,6 +514,7 @@
 		};
 		E1479E051BED6B7C00CF4F18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 980CB007644E2BC89BE6F096 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
