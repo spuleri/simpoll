@@ -123,5 +123,17 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "ShowDetail" {
+            let cell = sender as! PollTableViewCell
+            let indexPath = self.pollTableView.indexPathForCell(cell)
+            let selectedPoll = self.polls[indexPath!.row]
+            let detailViewController = segue.destinationViewController as! PollDetailViewController
+            detailViewController.poll = selectedPoll
+        }
+    }
+    
 }
 

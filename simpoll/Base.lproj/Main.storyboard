@@ -35,26 +35,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aai-ZB-9qn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aai-ZB-9qn">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.95294117647058818" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PollCell" rowHeight="111" id="cOo-4a-24Z" customClass="PollTableViewCell" customModule="simpoll" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PollCell" rowHeight="111" id="cOo-4a-24Z" customClass="PollTableViewCell" customModule="simpoll" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="111"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cOo-4a-24Z" id="8Yi-RM-Dex">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="110.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="110.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="### votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bab-nL-Tie">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="### votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bab-nL-Tie">
                                                     <rect key="frame" x="514" y="37" width="77.5" height="20.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="### votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqe-pJ-bwJ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="### votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqe-pJ-bwJ">
                                                     <rect key="frame" x="514" y="71" width="77.5" height="20.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -112,6 +112,7 @@
                                             <outlet property="optionTwoButton" destination="eNF-RA-Ltd" id="cBA-Do-aT2"/>
                                             <outlet property="optionTwoVoteLabel" destination="jqe-pJ-bwJ" id="6ly-QO-RRl"/>
                                             <outlet property="questionLabel" destination="aaG-Hl-kpP" id="8iF-wc-8oo"/>
+                                            <segue destination="zoj-qQ-fl2" kind="show" identifier="ShowDetail" id="T5V-3E-kil"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -156,6 +157,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="334"/>
+        </scene>
+        <!--Poll Detail View Controller-->
+        <scene sceneID="cIw-OE-zUn">
+            <objects>
+                <viewController storyboardIdentifier="showDetail" id="zoj-qQ-fl2" customClass="PollDetailViewController" customModule="simpoll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nfu-6A-XJP"/>
+                        <viewControllerLayoutGuide type="bottom" id="AJo-PF-4Ng"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6IV-2w-u18">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my question lol???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYf-Fu-XUy">
+                                <rect key="frame" x="189" y="105" width="222" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.95294117647058818" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="RYf-Fu-XUy" firstAttribute="centerX" secondItem="6IV-2w-u18" secondAttribute="centerX" id="S0t-Yi-mac"/>
+                            <constraint firstItem="RYf-Fu-XUy" firstAttribute="top" secondItem="Nfu-6A-XJP" secondAttribute="bottom" constant="41" id="bB4-9L-hWA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ew2-Zq-0sj"/>
+                    <connections>
+                        <outlet property="pollQuestionText" destination="RYf-Fu-XUy" id="bEh-nq-ych"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cUb-fo-MGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1302" y="363"/>
         </scene>
     </scenes>
     <resources>
