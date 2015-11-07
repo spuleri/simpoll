@@ -13,6 +13,7 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var pollTableView: UITableView!
     
     var addPollView: AddPollView!
+    var topView: UIView!
     
     // MARK: Target Action
     // ------------------------------------------------------------------------------- Target Action
@@ -21,14 +22,18 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAddPollButton()
+        configureTopView()
         configureAddPollView()
         
         pollTableView.delegate = self
         pollTableView.dataSource = self
         
+        // Construct swipe recognizer to dismiss new poll modal
         let swipeDown: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "dismissAddPollView")
         swipeDown.direction = UISwipeGestureRecognizerDirection.Down
         self.addPollView.addGestureRecognizer(swipeDown)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +48,19 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         addPollButton.layer.cornerRadius = addPollButton.frame.size.width/2;
     }
     
+    func configureTopView() {
+        // Create view to cover top half of screen when AddPollView is up
+        topView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
+        topView.backgroundColor = UIColor.blackColor()//.colorWithAlphaComponent(0.0)
+        topView.alpha = 0.0
+        self.view.addSubview(topView)
+        
+        // Add tap gesture recognizer on top view to dismiss new poll modal
+        let tapTopView: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissAddPollView")
+        self.topView.addGestureRecognizer(tapTopView)
+        
+    }
+    
     func configureAddPollView() {
         addPollView = NSBundle.mainBundle().loadNibNamed("AddPollView", owner: self, options: nil)[0] as? AddPollView
         addPollView.configure(CGRectMake(0, self.view.frame.size.height,
@@ -53,19 +71,25 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func showAddPollView() {
+        
         UIView.animateWithDuration(0.4, delay: 0.0, options: .CurveEaseOut, animations: {
             var viewFrame = self.addPollView.frame
-            viewFrame.origin.y -= viewFrame.size.height
             
+            viewFrame.origin.y -= viewFrame.size.height
             self.addPollView.frame = viewFrame
+            self.topView.alpha = 0.6
             }, completion: { finished in })
+        
+        
+        
+
     }
     
     func dismissAddPollView() {
         UIView.animateWithDuration(0.4, delay: 0.0, options: .CurveEaseOut, animations: {
             var viewFrame = self.addPollView.frame
             viewFrame.origin.y += viewFrame.size.height
-            
+            self.topView.alpha = 0.0
             self.addPollView.frame = viewFrame
             }, completion: { finished in })
     }
