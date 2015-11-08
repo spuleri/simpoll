@@ -811,6 +811,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D9D2C73C5750767C184FB8B6A3C0A11 /* Alamofire.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1106,6 +1107,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D9D2C73C5750767C184FB8B6A3C0A11 /* Alamofire.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

@@ -16,9 +16,9 @@ class PollTableViewCell: UITableViewCell {
     @IBOutlet weak var optionOneVoteLabel: UILabel!
     @IBOutlet weak var optionTwoVoteLabel: UILabel!
     
-    var votedOpt1: Bool = false
-    var votedOpt2: Bool = false
+    var vote: Int = -1
     var poll: Poll!
+    var options: [UIButton]!
     
     func configureWithPoll(poll:Poll) {
         self.poll = poll
@@ -27,13 +27,16 @@ class PollTableViewCell: UITableViewCell {
         optionOneButton.setTitle(poll.option1, forState: .Normal)
         optionTwoButton.setTitle(poll.option2, forState: .Normal)
         updateVoteCounts()
+        options = [optionOneButton, optionTwoButton]
     }
     
     func configureOptionButtons() {
         optionOneButton.layer.borderWidth = 1.0;
         optionOneButton.layer.borderColor =  UIColor(red: 209.0/255.0, green: 147.0/255.0, blue: 209.0/255.0, alpha: 1.0).CGColor
+        optionOneButton.tag = 0
         optionTwoButton.layer.borderWidth = 1.0;
         optionTwoButton.layer.borderColor =  UIColor(red: 209.0/255.0, green: 147.0/255.0, blue: 209.0/255.0, alpha: 1.0).CGColor
+        optionTwoButton.tag = 1
     }
     
     func updateVoteCounts() {
@@ -41,36 +44,27 @@ class PollTableViewCell: UITableViewCell {
         optionTwoVoteLabel.text = (poll.option2Votes == 1) ? "\(poll.option2Votes) vote" : "\(poll.option2Votes) votes"
     }
     
-    @IBAction func optionOneButtonTouched(sender: AnyObject) {
-        if (votedOpt2) {
-            votedOpt2 = false
-            optionTwoButton.backgroundColor = UIColor.whiteColor()
-            optionTwoButton.setTitleColor(UIColor(red: 209.0/255.0, green: 147.0/255.0, blue: 209.0/255.0, alpha: 1.0), forState: .Normal)
-            poll.decrementOption2()
-        }
-        if (!votedOpt1) {
-            votedOpt1 = true
-            optionOneButton.backgroundColor = UIColor(red: 209.0/255.0, green: 147.0/255.0, blue: 209.0/255.0, alpha: 1.0)
-            optionOneButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            poll.incrementOption1()
+    @IBAction func optionButtonTouched(sender: UIButton) {
+        selectOption(sender.tag)
+    }
+    
+    func selectOption(option: Int) {
+        if (vote != option) {
+            if ((vote) != -1) {
+                deselectOption()
+            }
+            vote = option
+            options[vote].backgroundColor = UIColor(red: 209.0/255.0, green: 147.0/255.0, blue: 209.0/255.0, alpha: 1.0)
+            options[vote].setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            poll.incrementOption(vote)
             voteCast()
         }
     }
     
-    @IBAction func optionTwoButtonTouched(sender: AnyObject) {
-        if (votedOpt1) {
-            votedOpt1 = false
-            optionOneButton.backgroundColor = UIColor.whiteColor()
-            optionOneButton.setTitleColor(UIColor(red: 209.0/255.0, green: 147.0/255.0, blue: 209.0/255.0, alpha: 1.0), forState: .Normal)
-            poll.decrementOption1()
-        }
-        if (!votedOpt2) {
-            votedOpt2 = true
-            optionTwoButton.backgroundColor = UIColor(red: 209.0/255.0, green: 147.0/255.0, blue: 209.0/255.0, alpha: 1.0)
-            optionTwoButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            poll.incrementOption2()
-            voteCast()
-        }
+    func deselectOption() {
+        options[vote].backgroundColor = UIColor.whiteColor()
+        options[vote].setTitleColor(UIColor(red: 209.0/255.0, green: 147.0/255.0, blue: 209.0/255.0, alpha: 1.0), forState: .Normal)
+        poll.decrementOption(vote)
     }
     
     func voteCast() {

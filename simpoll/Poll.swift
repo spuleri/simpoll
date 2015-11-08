@@ -28,19 +28,11 @@ class Poll {
         self.ID = ID
     }
     
-    func incrementOption1() {
-        self.option1Votes++
+    func incrementOption(option: Int) {
+        option == 0 ? ++self.option1Votes : ++self.option2Votes;
     }
     
-    func incrementOption2() {
-        self.option2Votes++
-    }
-    
-    func decrementOption1() {
-        self.option1Votes--
-    }
-    
-    func decrementOption2() {
-        self.option2Votes--
+    func decrementOption(option: Int) {
+        option == 0 ? --self.option1Votes : --self.option2Votes;
     }
 }

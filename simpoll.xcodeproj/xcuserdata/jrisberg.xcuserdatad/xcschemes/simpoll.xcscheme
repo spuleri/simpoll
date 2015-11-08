@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E1479DDA1BED6B7C00CF4F18"
-               BuildableName = "simpoll.app"
+               BuildableName = "Simpoll.app"
                BlueprintName = "simpoll"
                ReferencedContainer = "container:simpoll.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1479DDA1BED6B7C00CF4F18"
-            BuildableName = "simpoll.app"
+            BuildableName = "Simpoll.app"
             BlueprintName = "simpoll"
             ReferencedContainer = "container:simpoll.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1479DDA1BED6B7C00CF4F18"
-            BuildableName = "simpoll.app"
+            BuildableName = "Simpoll.app"
             BlueprintName = "simpoll"
             ReferencedContainer = "container:simpoll.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E1479DDA1BED6B7C00CF4F18"
-            BuildableName = "simpoll.app"
+            BuildableName = "Simpoll.app"
             BlueprintName = "simpoll"
             ReferencedContainer = "container:simpoll.xcodeproj">
          </BuildableReference>

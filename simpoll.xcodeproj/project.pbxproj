@@ -53,7 +53,7 @@
 		72BDD17296B7B185732D731E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7D9A6ED9FDCE6C10BBC11B27 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		980CB007644E2BC89BE6F096 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		E1479DDB1BED6B7C00CF4F18 /* simpoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1479DDB1BED6B7C00CF4F18 /* Simpoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simpoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1479DDE1BED6B7C00CF4F18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1479DE01BED6B7C00CF4F18 /* PollListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollListViewController.swift; sourceTree = "<group>"; };
 		E1479DE31BED6B7C00CF4F18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		E1479DDC1BED6B7C00CF4F18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E1479DDB1BED6B7C00CF4F18 /* simpoll.app */,
+				E1479DDB1BED6B7C00CF4F18 /* Simpoll.app */,
 				E1479DEF1BED6B7C00CF4F18 /* simpollTests.xctest */,
 				E1479DFA1BED6B7C00CF4F18 /* simpollUITests.xctest */,
 			);
@@ -195,7 +195,7 @@
 			);
 			name = simpoll;
 			productName = simpoll;
-			productReference = E1479DDB1BED6B7C00CF4F18 /* simpoll.app */;
+			productReference = E1479DDB1BED6B7C00CF4F18 /* Simpoll.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E1479DEE1BED6B7C00CF4F18 /* simpollTests */ = {
@@ -515,7 +515,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spuleri.simpoll;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Simpoll;
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "$(SRCROOT)/simpoll/simpoll-Bridging-Header.h";
 			};
 			name = Debug;
@@ -530,7 +530,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spuleri.simpoll;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Simpoll;
 			};
 			name = Release;
 		};

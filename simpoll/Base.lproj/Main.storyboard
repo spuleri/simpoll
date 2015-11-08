@@ -62,7 +62,7 @@
                                                         <color key="titleColor" red="0.81960784310000001" green="0.57647058819999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="optionOneButtonTouched:" destination="cOo-4a-24Z" eventType="touchUpInside" id="Wmc-zh-F2e"/>
+                                                        <action selector="optionButtonTouched:" destination="cOo-4a-24Z" eventType="touchUpInside" id="lmj-76-IoB"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eNF-RA-Ltd">
@@ -74,7 +74,7 @@
                                                         <color key="titleColor" red="0.81960784310000001" green="0.57647058819999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="optionTwoButtonTouched:" destination="cOo-4a-24Z" eventType="touchUpInside" id="Ofy-FS-cs8"/>
+                                                        <action selector="optionButtonTouched:" destination="cOo-4a-24Z" eventType="touchUpInside" id="VW6-5k-E4m"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poll text goes here what could you ask?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-Hl-kpP">
