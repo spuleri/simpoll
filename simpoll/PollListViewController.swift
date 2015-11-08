@@ -181,11 +181,14 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         if segue.identifier == "ShowDetail" {
             let cell = sender as! PollTableViewCell
             let indexPath = self.pollTableView.indexPathForCell(cell)
-            let selectedPoll = self.polls[indexPath!.row]
+            let selectedPoll = self.polls[indexPath!.section]
             let detailViewController = segue.destinationViewController as! PollDetailViewController
             detailViewController.poll = selectedPoll
         }
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true);
+    }
 }
 

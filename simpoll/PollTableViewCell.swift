@@ -22,8 +22,8 @@ class PollTableViewCell: UITableViewCell {
         self.poll = poll
         configureOptionButtons()
         questionLabel.text = poll.question
-        optionOneButton.titleLabel?.text = poll.option1
-        optionTwoButton.titleLabel?.text = poll.option2
+        optionOneButton.setTitle(poll.option1, forState: .Normal)
+        optionTwoButton.setTitle(poll.option2, forState: .Normal)
         updateVoteCounts()
     }
     

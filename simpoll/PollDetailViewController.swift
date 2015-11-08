@@ -32,9 +32,7 @@ class PollDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    // TODO: Add share sheet to this page
-    
+        
     @IBAction func touchShareButton(sender: AnyObject) {
         print("pressed share button")
         let linkToQuestion: NSURL = NSURL(string: "http://simpoll-remote.cloudapp.net/" + poll.ID)!
