@@ -13,7 +13,7 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var optionTwoField: UITextField!
     @IBOutlet weak var optionOneField: UITextField!
-    @IBOutlet weak var pollTextView: UITextView!
+    @IBOutlet weak var pollField: UITextField!
     @IBOutlet weak var optionOneView: UIView!
     @IBOutlet weak var optionTwoView: UIView!
     @IBOutlet weak var pollView: UIView!
@@ -28,13 +28,17 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
     }
     
     func configure(frame:CGRect, controller:AddPollController) {
-        self.frame = frame
+        self.frame = CGRectMake(0, frame.height, frame.width, heightOfElements())
         self.controller = controller
         optionOneField.delegate = self
         optionTwoField.delegate = self
-        pollTextView.delegate = self
+        pollField.delegate = self
         
         configureUI()
+    }
+    
+    func heightOfElements() -> CGFloat {
+        return (cancelButton.frame.origin.y + cancelButton.frame.height + 8)
     }
     
     // MARK: Target Action
@@ -42,18 +46,20 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
     
     @IBAction func cancelButtonTouched(sender: AnyObject) {
         clearFields()
+        self.endEditing(true)
         controller.cancelButtonTouched()
     }
     
     @IBAction func submitButtonTouched(sender: AnyObject) {
-        controller.submitButtonTouched(pollTextView.text, option1: optionOneField.text!, option2: optionTwoField.text!)
+        controller.submitButtonTouched(pollField.text!, option1: optionOneField.text!, option2: optionTwoField.text!)
     }
     
     func clearFields() {
         optionOneField.text = ""
         optionTwoField.text = ""
-        pollTextView.text = "Enter your poll here!"
+        pollField.text = ""
     }
+    
     
     // MARK: UI Config
     // ----------------------------------------------------------------------------------- UI Config
@@ -64,14 +70,14 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
         configureInsetView(optionOneView)
         configureInsetView(optionTwoView)
         configureInsetView(pollView)
+        changePlaceholderColor(pollField)
+        changePlaceholderColor(optionOneField)
+        changePlaceholderColor(optionTwoField)
     }
     
     func configureButton(button: UIButton) {
-        button.layer.masksToBounds = false;
-        button.layer.shadowOffset = CGSizeMake(0.0,1.0);
-        button.layer.shadowRadius = 1.0;
-        button.layer.shadowOpacity = 0.6;
-        button.layer.cornerRadius = 4.0;
+        button.layer.borderWidth = 1.0;
+        button.layer.borderColor =  UIColor(red: 209.0/255.0, green: 147.0/255.0, blue: 209.0/255.0, alpha: 1.0).CGColor
     }
     
     func configureInsetView(view: UIView) {
@@ -82,11 +88,17 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
         view.layer.cornerRadius = 4.0;
     }
     
+    func changePlaceholderColor(field: UITextField) {
+        let str = NSAttributedString(string: field.placeholder!, attributes: [NSForegroundColorAttributeName:UIColor.whiteColor()])
+        field.attributedPlaceholder = str
+    }
+    
     // MARK: Text Field Delegate
     // ------------------------------------------------------------------------- Text Field Delegate
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        controller.keyboardDismissed()
         return false
     }
     
