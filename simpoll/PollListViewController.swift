@@ -30,9 +30,16 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         
         getPolls()
         
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "keyboardShown:", name: UIKeyboardDidShowNotification, object: nil)
+        
         let swipeDown: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "dismissAddPollView")
         swipeDown.direction = UISwipeGestureRecognizerDirection.Down
         self.addPollView.addGestureRecognizer(swipeDown)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,7 +67,7 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
     func configureTopView() {
         // Create view to cover top half of screen when AddPollView is up
         topView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
-        topView.backgroundColor = UIColor.blackColor()//.colorWithAlphaComponent(0.0)
+        topView.backgroundColor = UIColor.blackColor()
         topView.alpha = 0.0
         self.view.addSubview(topView)
         
@@ -72,20 +79,35 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func configureAddPollView() {
         addPollView = NSBundle.mainBundle().loadNibNamed("AddPollView", owner: self, options: nil)[0] as? AddPollView
-        addPollView.configure(CGRectMake(0, self.view.frame.size.height,
-            self.view.frame.size.width,
-            self.view.frame.size.height/2),
-            controller: AddPollController(parent: self))
+        addPollView.configure(self.view.frame, controller: AddPollController(parent: self))
         self.view.addSubview(addPollView)
+    }
+    
+    func keyboardShown(notification: NSNotification) {
+        let info  = notification.userInfo!
+        let value: AnyObject = info[UIKeyboardFrameEndUserInfoKey]!
+        
+        let rawFrame = value.CGRectValue
+        let keyboardFrame = view.convertRect(rawFrame, fromView: nil)
+        
+        setAddPollViewFrameForHeight(keyboardFrame.origin.y)
     }
     
     // MARK: AddPollView
     // --------------------------------------------------------------------------------- AddPollView
     
-    func showAddPollView() {
-        UIView.animateWithDuration(0.4, delay: 0.0, options: .CurveEaseOut, animations: {
+    func setAddPollViewFrameForHeight(height: CGFloat) {
+        UIView.animateWithDuration(0.3, delay: 0.0, options: .CurveEaseOut, animations: {
             var viewFrame = self.addPollView.frame
-            viewFrame.origin.y -= viewFrame.size.height
+            viewFrame.origin.y = (height - viewFrame.height)
+            self.addPollView.frame = viewFrame
+            }, completion: { finished in })
+    }
+    
+    func showAddPollView() {
+        UIView.animateWithDuration(0.3, delay: 0.0, options: .CurveEaseOut, animations: {
+            var viewFrame = self.addPollView.frame
+            viewFrame.origin.y = self.view.frame.size.height - viewFrame.size.height
             self.addPollView.frame = viewFrame
             self.topView.alpha = 0.6
             }, completion: { finished in })
@@ -94,7 +116,7 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
     func dismissAddPollView() {
         UIView.animateWithDuration(0.4, delay: 0.0, options: .CurveEaseOut, animations: {
             var viewFrame = self.addPollView.frame
-            viewFrame.origin.y += viewFrame.size.height
+            viewFrame.origin.y = self.view.frame.size.height
             self.topView.alpha = 0.0
             self.addPollView.frame = viewFrame
             }, completion: { finished in })
