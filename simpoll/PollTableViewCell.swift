@@ -20,10 +20,18 @@ class PollTableViewCell: UITableViewCell {
     
     func configureWithPoll(poll:Poll) {
         self.poll = poll
+        configureOptionButtons()
         questionLabel.text = poll.question
         optionOneButton.titleLabel?.text = poll.option1
         optionTwoButton.titleLabel?.text = poll.option2
         updateVoteCounts()
+    }
+    
+    func configureOptionButtons() {
+        optionOneButton.layer.borderWidth = 1.0;
+        optionOneButton.layer.borderColor =  UIColor(red: 209.0/255.0, green: 147.0/255.0, blue: 209.0/255.0, alpha: 1.0).CGColor
+        optionTwoButton.layer.borderWidth = 1.0;
+        optionTwoButton.layer.borderColor =  UIColor(red: 209.0/255.0, green: 147.0/255.0, blue: 209.0/255.0, alpha: 1.0).CGColor
     }
     
     func updateVoteCounts() {

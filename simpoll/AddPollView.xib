@@ -25,7 +25,7 @@
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter your poll here!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Ei-25-fbp">
                             <rect key="frame" x="0.0" y="0.0" width="584" height="128"/>
                             <animations/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.98823529409999999" green="0.95294117649999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
@@ -46,6 +46,7 @@
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Option 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qhq-L1-7Mp">
                             <rect key="frame" x="0.0" y="0.0" width="584" height="50"/>
                             <animations/>
+                            <color key="backgroundColor" red="0.98823529409999999" green="0.95294117649999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -66,6 +67,7 @@
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Option 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCG-wB-TKu">
                             <rect key="frame" x="0.0" y="0.0" width="584" height="50"/>
                             <animations/>
+                            <color key="backgroundColor" red="0.98823529409999999" green="0.95294117649999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -91,7 +93,7 @@
                 </button>
             </subviews>
             <animations/>
-            <color key="backgroundColor" red="1" green="0.73333333329999995" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.81960784310000001" green="0.57647058819999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="dbH-3v-Sma" firstAttribute="top" secondItem="qiY-ZU-HES" secondAttribute="bottom" constant="8" id="7WJ-Nb-RW7"/>
                 <constraint firstItem="dbH-3v-Sma" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="9Qf-pt-AQD"/>

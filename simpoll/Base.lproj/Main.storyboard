@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="twa-Pz-i6G">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -35,59 +34,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aai-ZB-9qn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aai-ZB-9qn">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.95294117647058818" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PollCell" rowHeight="111" id="cOo-4a-24Z" customClass="PollTableViewCell" customModule="simpoll" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="111"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PollCell" id="cOo-4a-24Z" customClass="PollTableViewCell" customModule="simpoll" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cOo-4a-24Z" id="8Yi-RM-Dex">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="110.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="### votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bab-nL-Tie">
-                                                    <rect key="frame" x="514" y="37" width="77.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="### votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bab-nL-Tie">
+                                                    <rect key="frame" x="114" y="101" width="77.5" height="20.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="### votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqe-pJ-bwJ">
-                                                    <rect key="frame" x="514" y="71" width="77.5" height="20.5"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ScG-Fk-Gip">
+                                                    <rect key="frame" x="8" y="40" width="288" height="48"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScG-Fk-Gip">
-                                                    <rect key="frame" x="8" y="32" width="257" height="30"/>
-                                                    <animations/>
-                                                    <state key="normal" title="Option one text goes here tap tap tap"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                                                    <state key="normal" title="Option one text goes here tap tap tap">
+                                                        <color key="titleColor" red="0.81960784310000001" green="0.57647058819999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="optionOneButtonTouched:" destination="cOo-4a-24Z" eventType="touchUpInside" id="Wmc-zh-F2e"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNF-RA-Ltd">
-                                                    <rect key="frame" x="8" y="66" width="240" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eNF-RA-Ltd">
+                                                    <rect key="frame" x="304" y="40" width="288" height="48"/>
                                                     <animations/>
-                                                    <state key="normal" title="Option 2 text goes here tap tap tap"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                                                    <state key="normal" title="Option 2 text goes here tap tap tap">
+                                                        <color key="titleColor" red="0.81960784310000001" green="0.57647058819999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="optionTwoButtonTouched:" destination="cOo-4a-24Z" eventType="touchUpInside" id="Ofy-FS-cs8"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poll text goes here what could you ask?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-Hl-kpP">
-                                                    <rect key="frame" x="8" y="8" width="296.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poll text goes here what could you ask?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-Hl-kpP">
+                                                    <rect key="frame" x="135" y="8" width="330" height="24"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="### votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqe-pJ-bwJ">
+                                                    <rect key="frame" x="410" y="101" width="77.5" height="20.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <animations/>
                                             <constraints>
+                                                <constraint firstItem="aaG-Hl-kpP" firstAttribute="centerX" secondItem="8Yi-RM-Dex" secondAttribute="centerX" id="0hC-8S-PuK"/>
                                                 <constraint firstAttribute="trailing" secondItem="jqe-pJ-bwJ" secondAttribute="trailing" constant="8" id="2qz-gN-a1L"/>
+                                                <constraint firstItem="bab-nL-Tie" firstAttribute="centerX" secondItem="ScG-Fk-Gip" secondAttribute="centerX" id="4eF-2U-NYe"/>
                                                 <constraint firstItem="bab-nL-Tie" firstAttribute="centerY" secondItem="ScG-Fk-Gip" secondAttribute="centerY" id="7Dw-sP-IbH"/>
                                                 <constraint firstItem="ScG-Fk-Gip" firstAttribute="leading" secondItem="8Yi-RM-Dex" secondAttribute="leading" constant="8" id="7f9-Aq-0Nx"/>
                                                 <constraint firstItem="eNF-RA-Ltd" firstAttribute="top" secondItem="ScG-Fk-Gip" secondAttribute="bottom" constant="4" id="7qh-ez-tbo"/>
@@ -95,13 +104,30 @@
                                                 <constraint firstAttribute="trailing" secondItem="bab-nL-Tie" secondAttribute="trailing" constant="8" id="CaZ-5S-NVa"/>
                                                 <constraint firstItem="aaG-Hl-kpP" firstAttribute="top" secondItem="8Yi-RM-Dex" secondAttribute="top" constant="8" id="FsY-HM-xMM"/>
                                                 <constraint firstItem="jqe-pJ-bwJ" firstAttribute="centerY" secondItem="eNF-RA-Ltd" secondAttribute="centerY" id="GMQ-xs-VeP"/>
+                                                <constraint firstAttribute="trailing" secondItem="eNF-RA-Ltd" secondAttribute="trailing" constant="8" id="MXI-s3-xxx"/>
+                                                <constraint firstItem="eNF-RA-Ltd" firstAttribute="leading" secondItem="ScG-Fk-Gip" secondAttribute="trailing" constant="8" id="QKJ-iH-5h0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="bab-nL-Tie" secondAttribute="trailing" constant="8" id="RYJ-5j-oR6"/>
+                                                <constraint firstItem="ScG-Fk-Gip" firstAttribute="leading" secondItem="8Yi-RM-Dex" secondAttribute="leading" constant="8" id="Tnj-6b-a4H"/>
                                                 <constraint firstItem="ScG-Fk-Gip" firstAttribute="top" secondItem="aaG-Hl-kpP" secondAttribute="bottom" constant="4" id="Zld-nL-j4b"/>
+                                                <constraint firstItem="jqe-pJ-bwJ" firstAttribute="centerX" secondItem="eNF-RA-Ltd" secondAttribute="centerX" id="dtA-VY-ahk"/>
+                                                <constraint firstItem="eNF-RA-Ltd" firstAttribute="width" secondItem="ScG-Fk-Gip" secondAttribute="width" id="hhd-U5-zeZ"/>
+                                                <constraint firstItem="eNF-RA-Ltd" firstAttribute="centerY" secondItem="ScG-Fk-Gip" secondAttribute="centerY" id="ioe-FM-DW7"/>
+                                                <constraint firstItem="ScG-Fk-Gip" firstAttribute="top" secondItem="aaG-Hl-kpP" secondAttribute="bottom" constant="8" id="joa-th-dKD"/>
                                                 <constraint firstItem="aaG-Hl-kpP" firstAttribute="leading" secondItem="8Yi-RM-Dex" secondAttribute="leading" constant="8" id="vCB-L3-jhM"/>
+                                                <constraint firstAttribute="bottom" secondItem="bab-nL-Tie" secondAttribute="bottom" constant="8" id="xeg-qp-0bk"/>
+                                                <constraint firstAttribute="bottom" secondItem="jqe-pJ-bwJ" secondAttribute="bottom" constant="8" id="ycZ-53-CZI"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="Zld-nL-j4b"/>
+                                                    <exclude reference="vCB-L3-jhM"/>
+                                                    <exclude reference="7Dw-sP-IbH"/>
+                                                    <exclude reference="CaZ-5S-NVa"/>
                                                     <exclude reference="RYJ-5j-oR6"/>
+                                                    <exclude reference="7qh-ez-tbo"/>
+                                                    <exclude reference="Bka-sS-fdx"/>
+                                                    <exclude reference="2qz-gN-a1L"/>
+                                                    <exclude reference="GMQ-xs-VeP"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -133,6 +159,7 @@
                             </button>
                         </subviews>
                         <animations/>
+                        <color key="backgroundColor" red="0.81960784310000001" green="0.57647058819999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="cLk-bz-3dS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="72Q-Xq-0hb"/>
                             <constraint firstItem="cLk-bz-3dS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cm7-oF-avA"/>

@@ -75,7 +75,7 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
     }
     
     func configureInsetView(view: UIView) {
-        view.layer.masksToBounds = false;
+        view.layer.masksToBounds = true;
         view.layer.shadowOffset = CGSizeMake(-1.0,-1.0);
         view.layer.shadowRadius = 0;
         view.layer.shadowOpacity = 0.2;

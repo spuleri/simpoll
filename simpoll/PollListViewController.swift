@@ -33,8 +33,6 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         let swipeDown: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "dismissAddPollView")
         swipeDown.direction = UISwipeGestureRecognizerDirection.Down
         self.addPollView.addGestureRecognizer(swipeDown)
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -113,13 +111,31 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
     // ---------------------------------------------------------- Table View Delegate and Datasource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return polls.count
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if (section == 0) {
+            return UIView()
+        }
+        return UIView(frame: CGRectMake(0,0,8,0))
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if (section == 0) {
+            return 0.0
+        }
+        return 8.0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: PollTableViewCell = pollTableView.dequeueReusableCellWithIdentifier("PollCell") as! PollTableViewCell
         
-        cell.configureWithPoll(polls[indexPath.row])
+        cell.configureWithPoll(polls[indexPath.section])
         
         return cell
     }
