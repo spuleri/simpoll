@@ -21,12 +21,17 @@ class AddPollController: NSObject {
     // MARK: Target Action
     // ------------------------------------------------------------------------------- Target Action
     
+    func keyboardDismissed() {
+        parent.setAddPollViewFrameForHeight(parent.view.frame.height)
+    }
     func cancelButtonTouched() {
         parent.dismissAddPollView()
     }
     
     func submitButtonTouched(question:String, option1:String, option2:String) {
-        NetworkGuy.sharedInstance.createPoll(question, option1: option1, option2: option2)
+        if (!question.isEmpty && !option1.isEmpty && !option2.isEmpty) {
+            NetworkGuy.sharedInstance.createPoll(question, option1: option1, option2: option2)
+        }
         parent.dismissAddPollView()
     }
 }
