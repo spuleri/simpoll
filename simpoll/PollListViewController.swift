@@ -15,15 +15,14 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
     var addPollView: AddPollView!
     var polls: [Poll] = []
 	var topView: UIView!
+    var refreshControl: UIRefreshControl!
     
     // MARK: Lifecycle
     // ----------------------------------------------------------------------------------- Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureAddPollButton()
-        configureTopView()
-        configureAddPollView()
+        configureUI()
         
         pollTableView.delegate = self
         pollTableView.dataSource = self
@@ -32,10 +31,6 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "keyboardShown:", name: UIKeyboardDidShowNotification, object: nil)
-        
-        let swipeDown: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "dismissAddPollView")
-        swipeDown.direction = UISwipeGestureRecognizerDirection.Down
-        self.addPollView.addGestureRecognizer(swipeDown)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -50,12 +45,24 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         NetworkGuy.sharedInstance.getAllPolls { (polls:[Poll]) -> Void in
             self.polls = polls
             self.pollTableView.reloadData()
+            self.refreshControl.endRefreshing()
         }
     }
     
     // MARK: UI Config
     // ----------------------------------------------------------------------------------- UI Config
 
+    func configureUI() {
+        configureAddPollButton()
+        configureTopView()
+        configureAddPollView()
+        configureRefreshControl()
+        
+        let swipeDown: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "dismissAddPollView")
+        swipeDown.direction = UISwipeGestureRecognizerDirection.Down
+        self.addPollView.addGestureRecognizer(swipeDown)
+    }
+    
     func configureAddPollButton() {
         addPollButton.layer.masksToBounds = false;
         addPollButton.layer.shadowOffset = CGSizeMake(0.0,1.0);
@@ -81,6 +88,13 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         addPollView = NSBundle.mainBundle().loadNibNamed("AddPollView", owner: self, options: nil)[0] as? AddPollView
         addPollView.configure(self.view.frame, controller: AddPollController(parent: self))
         self.view.addSubview(addPollView)
+    }
+    
+    func configureRefreshControl() {
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: "getPolls", forControlEvents: UIControlEvents.ValueChanged)
+        self.pollTableView.addSubview(refreshControl)
     }
     
     func keyboardShown(notification: NSNotification) {

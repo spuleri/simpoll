@@ -46,13 +46,17 @@ class PollTableViewCell: UITableViewCell {
     
     @IBAction func optionOneButtonTouched(sender: AnyObject) {
         poll.incrementOption1()
-        updateVoteCounts()
-        disableVoteButtons()
+        voteCast()
     }
     
     @IBAction func optionTwoButtonTouched(sender: AnyObject) {
         poll.incrementOption2()
+        voteCast()
+    }
+    
+    func voteCast() {
         updateVoteCounts()
+        NetworkGuy.sharedInstance.updatePoll(poll.ID, option1votes: poll.option1Votes, option2votes: poll.option2Votes)
         disableVoteButtons()
     }
 }
