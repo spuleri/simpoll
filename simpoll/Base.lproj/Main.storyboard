@@ -258,6 +258,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ew2-Zq-0sj">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="fzp-6l-DzF">
+                            <color key="tintColor" red="0.81960784310000001" green="0.57647058819999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="touchShareButton:" destination="zoj-qQ-fl2" id="dtJ-au-BrB"/>
                             </connections>

@@ -27,6 +27,8 @@ class PollDetailViewController: UIViewController {
         super.viewDidLoad()
         configureQuestionText()
         configurePieChart()
+        
+        self.navigationController?.navigationBar.tintColor = majorityColor
     }
     
     override func didReceiveMemoryWarning() {

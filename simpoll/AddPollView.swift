@@ -52,6 +52,8 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
     
     @IBAction func submitButtonTouched(sender: AnyObject) {
         controller.submitButtonTouched(pollField.text!, option1: optionOneField.text!, option2: optionTwoField.text!)
+        self.endEditing(true)
+        clearFields()
     }
     
     func clearFields() {
@@ -100,16 +102,5 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
         textField.resignFirstResponder()
         controller.keyboardDismissed()
         return false
-    }
-    
-    // MARK: Text View Delegate
-    // -------------------------------------------------------------------------- Text View Delegate
-    
-    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        if(text == "\n") {
-            textView.resignFirstResponder()
-            return false
-        }
-        return true
     }
 }
