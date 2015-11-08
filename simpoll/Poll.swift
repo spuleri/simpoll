@@ -26,14 +26,6 @@ class Poll {
         self.option2Votes = option2Votes
         self.created = created
         self.ID = ID
-        
-        print(question)
-        print(option1)
-        print(option2)
-        print(option1Votes)
-        print(option2Votes)
-        print(created)
-        print(ID)
     }
     
     func incrementOption1() {

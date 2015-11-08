@@ -45,11 +45,15 @@ class PollTableViewCell: UITableViewCell {
     }
     
     @IBAction func optionOneButtonTouched(sender: AnyObject) {
+        optionOneButton.backgroundColor = UIColor(red: 209.0/255.0, green: 147.0/255.0, blue: 209.0/255.0, alpha: 1.0)
+        optionOneButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         poll.incrementOption1()
         voteCast()
     }
     
     @IBAction func optionTwoButtonTouched(sender: AnyObject) {
+        optionTwoButton.backgroundColor = UIColor(red: 209.0/255.0, green: 147.0/255.0, blue: 209.0/255.0, alpha: 1.0)
+        optionTwoButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         poll.incrementOption2()
         voteCast()
     }
