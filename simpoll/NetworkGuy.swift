@@ -14,41 +14,65 @@ class NetworkGuy {
     
     static let sharedInstance = NetworkGuy()
     
-    let testJSON = JSON(["poll1":["question":"is it time for bed?", "option1": "yes", "option2": "no", "option1Votes": 5, "option2Votes": 1, "created": NSDate(), "privatePoll": true],
-        "poll2":["question":"is it not time for bed?", "option1": "yes", "option2": "no", "option1Votes": 11, "option2Votes": 1, "created": NSDate(), "privatePoll": false],
-        "poll3":["question":"is it time for bed?", "option1": "yes", "option2": "no", "option1Votes":156, "option2Votes": 1, "created": NSDate(), "privatePoll": true],
-        "poll4":["question":"is it not time for bed?", "option1": "yes", "option2": "no", "option1Votes": 51, "option2Votes": 1, "created": NSDate(), "privatePoll": false]])
-    
-    // TODO: Remove - test endpoint to actually make an async request
-    let endpoint = "https://reddit.com/.json"
+    let baseURL = "http://simpoll-remote.cloudapp.net"
+    let latestEndpoint = "/polls_chron/"
+    let mostVotesEndpoint = "/polls_top/"
+    let pollEndpoint = "/poll/"
+    let newPollEndpoint = "/polls/"
+    let updatePollEndpoint = "/poll/" // + pollID
     
     let pollBuilder = PollBuilder()
     
     func getAllPolls(completionClosure: ([Poll]) -> Void) {
-        
-        Alamofire.request(.GET, endpoint)
+        let URL = baseURL + latestEndpoint
+        Alamofire.request(.GET, URL)
             .responseJSON { response in
                 guard response.result.error == nil else {
-                    // got an error in getting the data, need to handle it
-                    print("error calling GET on " + self.endpoint)
+                    print("Error calling GET on " + URL)
                     print(response.result.error!)
                     return
                 }
-                
-                if let value: AnyObject = response.result.value {
-                    // send dummy JSON for now instead of real response
-                    let polls = self.pollBuilder.buildListOfPolls(self.testJSON)
-                    
-                     completionClosure(polls)
-                }
+            
+            let polls = self.pollBuilder.buildListOfPolls(JSON(response.result.value!))
+            
+            completionClosure(polls)
+
         }
     }
     
     func createPoll(question: String , option1: String, option2: String) {
-        let newPoll =  self.pollBuilder.buildPollFromStrings(question, option1: option1, option2: option2)
+        let newPollJSON = [
+            "question": question,
+            "option1": option1,
+            "option2": option2
+        ]
         
-        print("Made a new poll: " + newPoll.question)
+        let URL = baseURL + newPollEndpoint
         
-        // TODO: make post request to create poll
+        Alamofire.request(.POST, URL, parameters: newPollJSON, encoding: .JSON).responseJSON { response in
+            guard response.result.error == nil else {
+                print("error calling GET on " + URL)
+                print(response.result.error!)
+                return
+            }
+        }
+    }
+    
+    func updatePoll(id: String , option1votes: Int, option2votes: Int) {
+        let newPollJSON: [String : AnyObject] = [
+            "id": id,
+            "option1votes": option1votes,
+            "option2votes": option2votes
+        ]
+        
+        let URL = baseURL + updatePollEndpoint + id
+        
+        Alamofire.request(.PUT, URL, parameters: newPollJSON, encoding: .JSON).responseJSON { response in
+            guard response.result.error == nil else {
+                print("error calling GET on " + URL)
+                print(response.result.error!)
+                return
+            }
+        }
     }
 }
