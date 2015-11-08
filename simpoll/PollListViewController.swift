@@ -28,7 +28,9 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         pollTableView.dataSource = self
         
         getPolls()
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "keyboardShown:", name: UIKeyboardDidShowNotification, object: nil)
     }

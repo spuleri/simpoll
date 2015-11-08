@@ -36,4 +36,11 @@ class Poll {
         self.option2Votes++
     }
     
+    func decrementOption1() {
+        self.option1Votes--
+    }
+    
+    func decrementOption2() {
+        self.option2Votes--
+    }
 }
