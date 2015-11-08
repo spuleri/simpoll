@@ -1,6 +1,9 @@
-# simpoll
-* simpoll is a simple polling app to get simple answers to your simple questions.
-* this is the repo for the iOS application   
+# simpoll iOS app
+---------------------
+- simpoll is a polling app to get simple answers to your simple questions.
+- Written in Swift 2
+- Repo for the REST API [is here](https://github.com/dpuleri/simpoll_backend) and small sharing web page
+
 
 ## Examples
 * "Chipotle or Moes?"
