@@ -37,8 +37,7 @@ class PollDetailViewController: UIViewController {
     
     @IBAction func touchShareButton(sender: AnyObject) {
         print("pressed share button")
-        // TODO: Uncomment poll.ID when merge code.
-        let linkToQuestion: NSURL = NSURL(string: "http://simpoll-remote.cloudapp.net/" /*+ poll.ID*/)!
+        let linkToQuestion: NSURL = NSURL(string: "http://simpoll-remote.cloudapp.net/" + poll.ID)!
         let objectsToShare: [AnyObject] = [linkToQuestion]
         let activityVC: UIActivityViewController = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         let excludeActivities = [UIActivityTypeAirDrop, UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypeAddToReadingList, UIActivityTypePostToFlickr, UIActivityTypePostToVimeo]
@@ -65,7 +64,6 @@ class PollDetailViewController: UIViewController {
         pieChart.descriptionTextColor = UIColor.whiteColor()
         pieChart.descriptionTextFont = UIFont(name: "Avenir-Medium", size: 14.0)
         pieChart.strokeChart()
-        // GREAT METHOD FOR CENTERING!!!!!!
         pieChart.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2)
         self.view.addSubview(pieChart)
     }
