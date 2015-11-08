@@ -13,6 +13,7 @@ import Foundation
 class PollDetailViewController: UIViewController {
     
     var poll: Poll!
+
     let majorityColor = UIColor(red:0.82, green:0.58, blue:0.82, alpha:1.0)
     let minorityColor: UIColor = UIColor(red:0.38, green:0.75, blue:0.70, alpha:1.0)
     
@@ -34,6 +35,17 @@ class PollDetailViewController: UIViewController {
     
     // TODO: Add share sheet to this page
     
+    @IBAction func touchShareButton(sender: AnyObject) {
+        print("pressed share button")
+        // TODO: Uncomment poll.ID when merge code.
+        let linkToQuestion: NSURL = NSURL(string: "http://simpoll-remote.cloudapp.net/" /*+ poll.ID*/)!
+        let objectsToShare: [AnyObject] = [linkToQuestion]
+        let activityVC: UIActivityViewController = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        let excludeActivities = [UIActivityTypeAirDrop, UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypeAddToReadingList, UIActivityTypePostToFlickr, UIActivityTypePostToVimeo]
+        activityVC.excludedActivityTypes = excludeActivities
+        self.presentViewController(activityVC, animated: true, completion: nil)
+
+    }
     func configurePieChart() {
         var opt1Color: UIColor
         var opt2Color: UIColor

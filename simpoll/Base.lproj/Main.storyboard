@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aai-ZB-9qn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aai-ZB-9qn">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.95294117647058818" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
@@ -210,7 +210,13 @@
                             <constraint firstItem="RYf-Fu-XUy" firstAttribute="top" secondItem="Nfu-6A-XJP" secondAttribute="bottom" constant="41" id="bB4-9L-hWA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ew2-Zq-0sj"/>
+                    <navigationItem key="navigationItem" id="ew2-Zq-0sj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="fzp-6l-DzF">
+                            <connections>
+                                <action selector="touchShareButton:" destination="zoj-qQ-fl2" id="dtJ-au-BrB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="pollQuestionText" destination="RYf-Fu-XUy" id="bEh-nq-ych"/>
                     </connections>
