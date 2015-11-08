@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (3.1.2)
+  - PNChart (0.8.7):
+    - UICountingLabel (~> 1.2.0)
+  - SwiftyJSON (2.3.1)
+  - UICountingLabel (1.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - PNChart
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: ece271ab33839d11c2153d71fb59c53545132cf9
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  Alamofire: 7c16ca65f3c7e681fd925fd7f2dec7747ff96855
+  PNChart: c1755716bbd45386d2035b2bf2ce73e6d3f8cb22
+  SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
+
+COCOAPODS: 0.39.0

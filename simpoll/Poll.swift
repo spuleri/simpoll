@@ -16,23 +16,23 @@ class Poll {
     var option1Votes: Int
     var option2Votes: Int
     var created: NSDate
-    var privatePoll = true
+    var ID: String
     
-    init(question: String, option1: String, option2: String, option1Votes: Int, option2Votes: Int, created: NSDate, privatePoll: Bool) {
-        // Initialize
+    init(question: String, option1: String, option2: String, option1Votes: Int, option2Votes: Int, created: NSDate, ID: String) {
         self.question = question
         self.option1 = option1
         self.option2 = option2
         self.option1Votes = option1Votes
         self.option2Votes = option2Votes
         self.created = created
-        self.privatePoll = privatePoll
+        self.ID = ID
     }
     
-    private func incrementOption1() {
+    func incrementOption1() {
         self.option1Votes++
     }
-    private func incrementOption2() {
+    
+    func incrementOption2() {
         self.option2Votes++
     }
     

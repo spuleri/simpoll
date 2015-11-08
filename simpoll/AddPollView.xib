@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddPollView" customModule="simpoll" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4Z-TA-hi7">
+                    <rect key="frame" x="8" y="182" width="288" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Cancel">
+                        <color key="titleColor" red="0.81960784310000001" green="0.57647058819999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelButtonTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="o7e-AC-3xz"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qiY-ZU-HES">
+                    <rect key="frame" x="8" y="8" width="584" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your poll..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fuA-k5-iGa">
+                            <rect key="frame" x="0.0" y="0.0" width="584" height="50"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.81960784310000001" green="0.57647058819999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="fuA-k5-iGa" firstAttribute="top" secondItem="qiY-ZU-HES" secondAttribute="top" id="IdL-EW-1pr"/>
+                        <constraint firstAttribute="bottom" secondItem="fuA-k5-iGa" secondAttribute="bottom" id="bKr-aL-ane"/>
+                        <constraint firstItem="fuA-k5-iGa" firstAttribute="leading" secondItem="qiY-ZU-HES" secondAttribute="leading" id="eg2-uM-JGV"/>
+                        <constraint firstAttribute="height" constant="50" id="uKB-3R-gje"/>
+                        <constraint firstAttribute="trailing" secondItem="fuA-k5-iGa" secondAttribute="trailing" id="zEs-am-JUl"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbH-3v-Sma">
+                    <rect key="frame" x="8" y="66" width="584" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the first option..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qhq-L1-7Mp">
+                            <rect key="frame" x="0.0" y="0.0" width="584" height="50"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.81960784310000001" green="0.57647058819999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0fk-PJ-LPD"/>
+                        <constraint firstAttribute="bottom" secondItem="Qhq-L1-7Mp" secondAttribute="bottom" id="8At-XW-8Il"/>
+                        <constraint firstItem="Qhq-L1-7Mp" firstAttribute="leading" secondItem="dbH-3v-Sma" secondAttribute="leading" id="ftJ-UO-8oF"/>
+                        <constraint firstItem="Qhq-L1-7Mp" firstAttribute="top" secondItem="dbH-3v-Sma" secondAttribute="top" id="h7D-hW-oQt"/>
+                        <constraint firstAttribute="trailing" secondItem="Qhq-L1-7Mp" secondAttribute="trailing" id="lxU-AP-w0F"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0h-8M-BN8">
+                    <rect key="frame" x="8" y="124" width="584" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the second option..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCG-wB-TKu">
+                            <rect key="frame" x="0.0" y="0.0" width="584" height="50"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.81960784310000001" green="0.57647058819999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5m8-jT-uFH"/>
+                        <constraint firstItem="fCG-wB-TKu" firstAttribute="leading" secondItem="F0h-8M-BN8" secondAttribute="leading" id="FnB-zg-MPZ"/>
+                        <constraint firstAttribute="bottom" secondItem="fCG-wB-TKu" secondAttribute="bottom" id="JBD-Hw-gd7"/>
+                        <constraint firstItem="fCG-wB-TKu" firstAttribute="top" secondItem="F0h-8M-BN8" secondAttribute="top" id="T89-uc-31a"/>
+                        <constraint firstAttribute="trailing" secondItem="fCG-wB-TKu" secondAttribute="trailing" id="f4O-uz-1xK"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRy-tF-lhh">
+                    <rect key="frame" x="304" y="182" width="288" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Submit">
+                        <color key="titleColor" red="0.81960784310000001" green="0.57647058819999997" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="submitButtonTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="coe-Ng-LEM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="dbH-3v-Sma" firstAttribute="top" secondItem="qiY-ZU-HES" secondAttribute="bottom" constant="8" id="7WJ-Nb-RW7"/>
+                <constraint firstItem="dbH-3v-Sma" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="9Qf-pt-AQD"/>
+                <constraint firstAttribute="trailing" secondItem="dbH-3v-Sma" secondAttribute="trailing" constant="8" id="EXb-ss-hAH"/>
+                <constraint firstItem="n4Z-TA-hi7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="GXV-LC-JSG"/>
+                <constraint firstItem="hRy-tF-lhh" firstAttribute="leading" secondItem="n4Z-TA-hi7" secondAttribute="trailing" constant="8" id="MP6-Oy-2Qs"/>
+                <constraint firstItem="F0h-8M-BN8" firstAttribute="top" secondItem="dbH-3v-Sma" secondAttribute="bottom" constant="8" id="OFx-Cv-19d"/>
+                <constraint firstAttribute="trailing" secondItem="qiY-ZU-HES" secondAttribute="trailing" constant="8" id="XLL-JF-q5m"/>
+                <constraint firstItem="qiY-ZU-HES" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Zte-bK-7oF"/>
+                <constraint firstItem="qiY-ZU-HES" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="d8v-hX-bO3"/>
+                <constraint firstItem="F0h-8M-BN8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="drJ-OE-QlH"/>
+                <constraint firstAttribute="trailing" secondItem="hRy-tF-lhh" secondAttribute="trailing" constant="8" id="eXw-Ne-66z"/>
+                <constraint firstItem="n4Z-TA-hi7" firstAttribute="width" secondItem="hRy-tF-lhh" secondAttribute="width" id="gRV-sn-LR1"/>
+                <constraint firstItem="n4Z-TA-hi7" firstAttribute="top" secondItem="F0h-8M-BN8" secondAttribute="bottom" constant="8" id="j7Z-QD-0ez"/>
+                <constraint firstAttribute="trailing" secondItem="F0h-8M-BN8" secondAttribute="trailing" constant="8" id="owd-s2-Mo2"/>
+                <constraint firstAttribute="bottom" secondItem="n4Z-TA-hi7" secondAttribute="bottom" constant="8" id="qdO-Lj-Zja"/>
+                <constraint firstAttribute="bottom" secondItem="hRy-tF-lhh" secondAttribute="bottom" constant="8" id="v7y-El-X97"/>
+                <constraint firstItem="hRy-tF-lhh" firstAttribute="top" secondItem="F0h-8M-BN8" secondAttribute="bottom" constant="8" id="wg6-Hl-zqr"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="qdO-Lj-Zja"/>
+                    <exclude reference="v7y-El-X97"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="cancelButton" destination="n4Z-TA-hi7" id="Baa-vz-fkd"/>
+                <outlet property="optionOneField" destination="Qhq-L1-7Mp" id="Pmb-Wf-Qzy"/>
+                <outlet property="optionOneView" destination="dbH-3v-Sma" id="upZ-sd-5hY"/>
+                <outlet property="optionTwoField" destination="fCG-wB-TKu" id="1S6-QJ-M0p"/>
+                <outlet property="optionTwoView" destination="F0h-8M-BN8" id="Mow-bA-M8R"/>
+                <outlet property="pollField" destination="fuA-k5-iGa" id="aNz-zY-41o"/>
+                <outlet property="pollView" destination="qiY-ZU-HES" id="Y0R-85-Qzd"/>
+                <outlet property="submitButton" destination="hRy-tF-lhh" id="Ah7-fl-1kq"/>
+            </connections>
+        </view>
+    </objects>
+</document>
