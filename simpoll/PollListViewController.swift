@@ -51,9 +51,8 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         configureAddPollView()
         configureRefreshControl()
         
-        let swipeDown: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "dismissAddPollView")
-        swipeDown.direction = UISwipeGestureRecognizerDirection.Down
-        self.addPollView.addGestureRecognizer(swipeDown)
+        pollTableView.estimatedRowHeight = 130.0
+        pollTableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func configureAddPollButton() {
@@ -71,16 +70,18 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         topView.alpha = 0.0
         self.view.addSubview(topView)
         
-        // Add tap gesture recognizer on top view to dismiss new poll modal
         let tapTopView: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissAddPollView")
         self.topView.addGestureRecognizer(tapTopView)
-        
     }
     
     func configureAddPollView() {
         addPollView = NSBundle.mainBundle().loadNibNamed("AddPollView", owner: self, options: nil)[0] as? AddPollView
         addPollView.configure(self.view.frame, controller: AddPollController(parent: self))
         self.view.addSubview(addPollView)
+        
+        let swipeDown: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "dismissAddPollView")
+        swipeDown.direction = UISwipeGestureRecognizerDirection.Down
+        self.addPollView.addGestureRecognizer(swipeDown)
     }
     
     func configureRefreshControl() {
@@ -155,10 +156,8 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         
         if segue.identifier == "ShowDetail" {
             let cell = sender as! PollTableViewCell
-            let indexPath = self.pollTableView.indexPathForCell(cell)
-            let selectedPoll = self.polls[indexPath!.section]
             let detailViewController = segue.destinationViewController as! PollDetailViewController
-            detailViewController.poll = selectedPoll
+            detailViewController.poll = cell.poll
         }
     }
     

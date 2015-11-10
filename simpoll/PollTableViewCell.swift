@@ -16,9 +16,9 @@ class PollTableViewCell: UITableViewCell {
     @IBOutlet weak var optionOneVoteLabel: UILabel!
     @IBOutlet weak var optionTwoVoteLabel: UILabel!
     
-    var vote: Int = -1
+    private var vote: Int = -1
+    private var options: [UIButton]!
     var poll: Poll!
-    var options: [UIButton]!
     
     func configureWithPoll(poll:Poll) {
         self.poll = poll

@@ -54,7 +54,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ScG-Fk-Gip">
-                                                    <rect key="frame" x="8" y="40" width="288" height="48"/>
+                                                    <rect key="frame" x="8" y="40" width="288" height="51"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
@@ -66,7 +66,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eNF-RA-Ltd">
-                                                    <rect key="frame" x="304" y="40" width="288" height="48"/>
+                                                    <rect key="frame" x="304" y="41.5" width="288" height="48"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
@@ -77,7 +77,7 @@
                                                         <action selector="optionButtonTouched:" destination="cOo-4a-24Z" eventType="touchUpInside" id="VW6-5k-E4m"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poll text goes here what could you ask?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-Hl-kpP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poll text goes here what could you ask?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-Hl-kpP">
                                                     <rect key="frame" x="135" y="8" width="330" height="24"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
@@ -97,6 +97,7 @@
                                                 <constraint firstItem="aaG-Hl-kpP" firstAttribute="centerX" secondItem="8Yi-RM-Dex" secondAttribute="centerX" id="0hC-8S-PuK"/>
                                                 <constraint firstAttribute="trailing" secondItem="jqe-pJ-bwJ" secondAttribute="trailing" constant="8" id="2qz-gN-a1L"/>
                                                 <constraint firstItem="bab-nL-Tie" firstAttribute="centerX" secondItem="ScG-Fk-Gip" secondAttribute="centerX" id="4eF-2U-NYe"/>
+                                                <constraint firstItem="aaG-Hl-kpP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Yi-RM-Dex" secondAttribute="leadingMargin" constant="8" id="4oL-tm-D8n"/>
                                                 <constraint firstItem="bab-nL-Tie" firstAttribute="centerY" secondItem="ScG-Fk-Gip" secondAttribute="centerY" id="7Dw-sP-IbH"/>
                                                 <constraint firstItem="ScG-Fk-Gip" firstAttribute="leading" secondItem="8Yi-RM-Dex" secondAttribute="leading" constant="8" id="7f9-Aq-0Nx"/>
                                                 <constraint firstItem="eNF-RA-Ltd" firstAttribute="top" secondItem="ScG-Fk-Gip" secondAttribute="bottom" constant="4" id="7qh-ez-tbo"/>
@@ -104,6 +105,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="bab-nL-Tie" secondAttribute="trailing" constant="8" id="CaZ-5S-NVa"/>
                                                 <constraint firstItem="aaG-Hl-kpP" firstAttribute="top" secondItem="8Yi-RM-Dex" secondAttribute="top" constant="8" id="FsY-HM-xMM"/>
                                                 <constraint firstItem="jqe-pJ-bwJ" firstAttribute="centerY" secondItem="eNF-RA-Ltd" secondAttribute="centerY" id="GMQ-xs-VeP"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="aaG-Hl-kpP" secondAttribute="trailing" constant="8" id="JnB-Cf-nH2"/>
                                                 <constraint firstAttribute="trailing" secondItem="eNF-RA-Ltd" secondAttribute="trailing" constant="8" id="MXI-s3-xxx"/>
                                                 <constraint firstItem="eNF-RA-Ltd" firstAttribute="leading" secondItem="ScG-Fk-Gip" secondAttribute="trailing" constant="8" id="QKJ-iH-5h0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="bab-nL-Tie" secondAttribute="trailing" constant="8" id="RYJ-5j-oR6"/>
@@ -111,6 +113,7 @@
                                                 <constraint firstItem="ScG-Fk-Gip" firstAttribute="top" secondItem="aaG-Hl-kpP" secondAttribute="bottom" constant="4" id="Zld-nL-j4b"/>
                                                 <constraint firstItem="jqe-pJ-bwJ" firstAttribute="centerX" secondItem="eNF-RA-Ltd" secondAttribute="centerX" id="dtA-VY-ahk"/>
                                                 <constraint firstItem="eNF-RA-Ltd" firstAttribute="width" secondItem="ScG-Fk-Gip" secondAttribute="width" id="hhd-U5-zeZ"/>
+                                                <constraint firstItem="bab-nL-Tie" firstAttribute="top" secondItem="ScG-Fk-Gip" secondAttribute="bottom" constant="10" id="iNF-g6-W7a"/>
                                                 <constraint firstItem="eNF-RA-Ltd" firstAttribute="centerY" secondItem="ScG-Fk-Gip" secondAttribute="centerY" id="ioe-FM-DW7"/>
                                                 <constraint firstItem="ScG-Fk-Gip" firstAttribute="top" secondItem="aaG-Hl-kpP" secondAttribute="bottom" constant="8" id="joa-th-dKD"/>
                                                 <constraint firstItem="aaG-Hl-kpP" firstAttribute="leading" secondItem="8Yi-RM-Dex" secondAttribute="leading" constant="8" id="vCB-L3-jhM"/>
