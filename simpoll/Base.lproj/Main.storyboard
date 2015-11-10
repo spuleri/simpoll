@@ -25,7 +25,7 @@
         <!--Polls-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="PollListViewController" customModule="simpoll" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="PollListViewController" customModule="Simpoll" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -39,7 +39,7 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.95294117647058818" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PollCell" id="cOo-4a-24Z" customClass="PollTableViewCell" customModule="simpoll" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PollCell" id="cOo-4a-24Z" customClass="PollTableViewCell" customModule="Simpoll" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cOo-4a-24Z" id="8Yi-RM-Dex">
@@ -188,7 +188,7 @@
         <!--Poll Detail View Controller-->
         <scene sceneID="cIw-OE-zUn">
             <objects>
-                <viewController storyboardIdentifier="showDetail" id="zoj-qQ-fl2" customClass="PollDetailViewController" customModule="simpoll" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="showDetail" id="zoj-qQ-fl2" customClass="PollDetailViewController" customModule="Simpoll" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nfu-6A-XJP"/>
                         <viewControllerLayoutGuide type="bottom" id="AJo-PF-4Ng"/>

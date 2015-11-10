@@ -30,9 +30,12 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
     func configure(frame:CGRect, controller:AddPollController) {
         self.frame = CGRectMake(0, frame.height, frame.width, heightOfElements())
         self.controller = controller
-        optionOneField.delegate = self
-        optionTwoField.delegate = self
         pollField.delegate = self
+        pollField.tag = 0
+        optionOneField.delegate = self
+        optionOneField.tag = 1
+        optionTwoField.delegate = self
+        optionTwoField.tag = 2
         
         configureUI()
     }
@@ -99,8 +102,12 @@ class AddPollView: UIView, UITextFieldDelegate, UITextViewDelegate {
     // ------------------------------------------------------------------------- Text Field Delegate
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        controller.keyboardDismissed()
+        if let view = self.viewWithTag(textField.tag+1) {
+            view.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
         return false
     }
 }

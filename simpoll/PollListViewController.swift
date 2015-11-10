@@ -29,15 +29,6 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         
         getPolls()
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "keyboardShown:", name: UIKeyboardDidShowNotification, object: nil)
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -99,26 +90,8 @@ class PollListViewController: UIViewController, UITableViewDelegate, UITableView
         self.pollTableView.addSubview(refreshControl)
     }
     
-    func keyboardShown(notification: NSNotification) {
-        let info  = notification.userInfo!
-        let value: AnyObject = info[UIKeyboardFrameEndUserInfoKey]!
-        
-        let rawFrame = value.CGRectValue
-        let keyboardFrame = view.convertRect(rawFrame, fromView: nil)
-        
-        setAddPollViewFrameForHeight(keyboardFrame.origin.y)
-    }
-    
     // MARK: AddPollView
     // --------------------------------------------------------------------------------- AddPollView
-    
-    func setAddPollViewFrameForHeight(height: CGFloat) {
-        UIView.animateWithDuration(0.3, delay: 0.0, options: .CurveEaseOut, animations: {
-            var viewFrame = self.addPollView.frame
-            viewFrame.origin.y = (height - viewFrame.height)
-            self.addPollView.frame = viewFrame
-            }, completion: { finished in })
-    }
     
     func showAddPollView() {
         UIView.animateWithDuration(0.3, delay: 0.0, options: .CurveEaseOut, animations: {

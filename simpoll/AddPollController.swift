@@ -21,9 +21,6 @@ class AddPollController: NSObject {
     // MARK: Target Action
     // ------------------------------------------------------------------------------- Target Action
     
-    func keyboardDismissed() {
-        parent.setAddPollViewFrameForHeight(parent.view.frame.height)
-    }
     func cancelButtonTouched() {
         parent.dismissAddPollView()
     }
